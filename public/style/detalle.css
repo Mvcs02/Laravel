@@ -1,0 +1,162 @@
+/*----- GENERAL -----*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+
+/*----- HEADER -----*/
+header{
+    background-color: white; /* Used if the image is unavailable */
+    height: 13vh; /* You must set a specified height */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+/*- menu: links + logo -*/
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+}
+
+/*- menu: logo -*/
+.logo{
+    margin-top: 5vh;
+}
+
+/*- menu: links -*/
+.nav_links{
+    margin-top: 5vh;
+}
+
+.nav_links a{
+    text-decoration: none;
+    color: white;
+    margin-left: 6vh;
+}
+
+.nav_links a:hover{
+    color: thistle;
+}
+
+/*- text -*/
+header h2{
+    margin-top: 5vh;
+    margin-left: 10vh;
+    color: black;
+}
+
+/*----- SECTION: MAS SOBRE NOSOTROS -----*/
+
+/*- section -*/
+#sobre_nosotros{
+    background-color: whitesmoke;
+    padding: 10vh;
+}
+/*- title -*/
+#sobre_nosotros h2{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/*- divs -*/
+#sobre_nosotros div{
+    display: table-cell;
+    text-align: center;
+}
+
+/*- div titles -*/
+#sobre_nosotros div h3{
+    margin: 2vh;
+}
+
+#conocenos_nosotros h2{
+    text-align: center;
+    margin-top: -7%;
+}
+
+
+/*----- FOOTER -----*/
+footer{
+    background-color: #323232;
+    height: 70px;
+}
+footer div{
+    display: inline-block;
+    margin: 20px;
+}
+
+/*- menu: links -*/
+footer div a{
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+}
+footer div a:hover{
+    color: thistle;
+}
+
+/*- text -*/
+footer div p{
+    color: white;
+    text-align: right;
+}
+/*----- Apartado INformacionde la casa -----*/
+.cuerpo{
+    display: flex;
+}
+.det-info{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 20px;
+}
+.det-info h1{
+    text-align: center;
+    height: auto;
+}
+.det-gen{
+    width: 50%;
+    margin: 15px;
+}
+.det-gen h2{
+    text-align: left;
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: auto;
+}
+.det-gen .precio{
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(106, 173, 7);
+}
+.det-icon{
+    border: 5%;
+    border-top: 20px;
+    border-color: #323232;
+    width: 55%;
+    margin: 15px;
+}
+.tit{
+    font-size: 19px;
+    color: #323232;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.det-contenido{
+    width: 60%;
+    margin: 15px;
+}
+.det-contenido .ubi{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.det-contenido .des{
+font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+

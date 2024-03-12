@@ -1,0 +1,293 @@
+/*----- GENERAL -----*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+
+/*----- HEADER -----*/
+header{
+    background-image: url("../style/images/header.jpg");
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 100vh; /* You must set a specified height */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+/*- menu: links + logo -*/
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*- menu: logo -*/
+.logo{
+    margin-top: 5vh;
+}
+
+/*- menu: links -*/
+.nav_links{
+    margin-top: 5vh;
+}
+
+.nav_links a{
+    text-decoration: none;
+    color: white;
+    margin-left: 6vh;
+}
+
+.nav_links a:hover{
+    color: thistle;
+}
+
+/*- text -*/
+header h2{
+    margin-top: 70vh;
+    margin-left: 20vh;
+    color: white;
+}
+
+
+
+/*----- SECTION: MAS SOBRE NOSOTROS -----*/
+
+/*- section -*/
+#sobre_nosotros{
+    background-color: whitesmoke;
+    padding: 10vh;
+}
+/*- title -*/
+#sobre_nosotros h2{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/*- divs -*/
+#sobre_nosotros div{
+    display: table-cell;
+    text-align: center;
+}
+
+/*- div titles -*/
+#sobre_nosotros div h3{
+    margin: 2vh;
+}
+
+
+/*----- SECTION: CASAS Y DEPAS EN VENTA -----*/
+
+#casas_en_venta h2{
+    margin: 5vh;
+    text-align: center;
+}
+#casas_en_venta {
+    width: 100%;
+    height: 90vh;
+}
+
+/*- anuncios boxes -*/
+#anuncios{
+    float: left;
+    justify-content: center;
+    align-items: center;
+    margin-left: 60px;
+}
+
+/*- each anuncio box -*/
+.anuncio{
+    width: 45vh;
+    height: 70vh;
+    background-color: #fdfdfd;
+    border: 1px solid grey;
+    margin: 10px;
+    flex-flow: wrap;
+    display: flex;
+    text-align: center;
+
+}
+.anuncio img{
+    width: 44.8vh;
+    height: 30vh;
+    
+}
+
+.anuncio h3{
+   text-align: center;
+   margin-top: 2vh;
+}
+
+.anuncio p{
+    margin: 2vh;
+ }
+
+.anuncio .precio{
+    color:#71B11F; 
+    margin-right: auto;
+    font-weight: bold;
+
+}
+
+ /*- icons -*/
+
+.iconos img{
+    width: 5vh;
+    height: 5vh;
+    margin-top: 2vh;
+    margin-left: 4vh;
+ }
+
+ .iconos span{
+    justify-items: center;
+ }
+
+/*- buttons -*/
+
+ .anuncio button{
+    align-items: flex-end;
+    margin: 1.5vh;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    padding-left: 12vh;
+    padding-right: 12vh;
+    white-space: nowrap;
+    background-color: darkorange;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+
+
+ }
+
+
+.btn-todas button{
+    margin: 1.5vh;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    background-color: #71B11F;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+ }
+
+
+/*----- ENCUENTRA LA CASA DE TUS SUEÑOS -----*/
+
+#casa_sueños{
+    background-image: url("../style/images/encuentra.jpg");
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 40vh; /* You must set a specified height */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    padding:20px;
+}
+
+#casa_sueños h1, #casa_sueños p, #casa_sueños button{
+    margin-left: 10vh;
+    margin-top: 6vh;
+    color: white;
+ 
+}
+
+
+#casa_sueños button{
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    background-color: darkorange;
+    border: 0px solid white;
+    color: white;
+    font-weight: bold;
+}
+
+
+/*----- ULTIMA SECCION: NUESTRO BLOG + TESTIMONIALES -----*/
+
+#ultima_seccion{
+    position: relative;
+    display: flex;
+}
+
+/*--- Nuestro blog ---*/
+#nuestro_blog {
+    margin: 10vh;
+}
+
+#nuestro_blog .entrada_blog{
+    position: relative;
+    display: flex;
+    margin: 5vh;
+}
+
+/*- imagen -*/
+#nuestro_blog .entrada_blog img{
+    width: 30vh;
+    margin-right: 2vh;
+}
+
+/*- linea -*/
+#nuestro_blog .entrada_blog .linea{
+    border-bottom: 4px solid #71B11F;
+    max-width: 10vh;
+}
+
+
+/*--- Testimoniales ---*/
+#testimoniales{
+    margin: 5vh;
+}
+
+#testimoniales div{
+    display: flex;
+    background-color: #71B11F;
+    padding: 5vh;
+    border-radius: 10px;
+    width: 40vh;
+    color: white;
+
+}
+
+#testimoniales div .fa-quote-left{
+    font-size: 20px;
+    margin-right: 1vh;
+}
+
+#testimoniales div span{
+    float: right;
+    margin-top: 3px;
+    
+}
+
+/*----- FOOTER -----*/
+footer{
+    background-color: #323232;
+    height: 70px;
+}
+footer div{
+    display: inline-block;
+    margin: 20px;
+}
+
+/*- menu: links -*/
+footer div a{
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+}
+footer div a:hover{
+    color: thistle;
+}
+
+/*- text -*/
+footer div p{
+    color: white;
+    text-align: right;
+}

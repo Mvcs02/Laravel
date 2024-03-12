@@ -1,0 +1,14 @@
+header{
+    background-image: url("/img/header.jpg");
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 100vh; /* You must set a specified height */
+    width: auto;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+/* .navbar{
+    background-color: black;
+    height: 10vh;
+    width:auto ;
+} */

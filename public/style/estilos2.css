@@ -1,0 +1,132 @@
+
+
+body{
+    height: 100vh;
+    margin: 0%;
+    padding: 0%;
+    background: url(../style/images/login.png) no-repeat center center;
+    background-size: cover;
+    font-family: sans-serif;
+
+}
+
+
+
+
+.login-box{
+
+    width: 320px;
+    height: 320px;
+    background: rgba(103, 103, 103, 0.908);
+    color: white;
+    top: 55%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 10px 30px;
+    border-radius: 5%;
+    box-shadow: 7px 13px 37px #000000;
+
+
+
+}
+
+.login-box .avatar{
+    width: 450px;
+    height: 400px;
+    position: absolute;
+    top: -320px;
+    left: calc(50% - 240px);
+    margin: 0px -10px;
+}
+
+.login-box H1{
+    margin: 0%;
+    padding:0 0 60px;
+    text-align: center;
+    font-size: 29px;
+    
+
+}
+
+.login-box label{
+    margin: 0%;
+    padding: 0%;
+    font-weight: bold;
+    display: block;
+    
+
+
+}
+.login-box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login-box input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 10px;
+
+}
+.login-box input[type="submit"]:hover{
+    background: #ffffff;
+    transition: .5s;
+    border-radius: 10px;
+  }
+.login-box:hover{
+    background: #000000cf;
+    transition: .5s;
+    border-radius: 10px;
+  }
+
+
+
+.login-box input[type="submit"]:hover {
+    color: rgb(0, 0, 0);
+
+}
+
+.login-box a{
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 15px;
+    color: white;
+
+
+}
+.login-box a:hover{
+    color: #c0c0c0;
+
+
+}
+.login-box input [type = "password" ] {
+    border: none;
+    border-bottom: 1px solid #b80f22;
+    height: 40px;
+   background: transparent;
+   outline: none;
+   height: 40px;
+   color: #fff;
+   font-size: 16px;
+}
+.controls {
+    width: 100%;
+    background: #000000;
+    padding: 2px  -1px;
+    margin-bottom: 16px;
+    border: 1px solid #000000;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #ffffff;
+  }
+
+  .controls:hover {
+    background: #b4b4b44c;
+    transition: .5s;
+  }

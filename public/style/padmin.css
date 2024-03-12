@@ -1,0 +1,150 @@
+.admin-aside {
+    background-color: #f2f2f2;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+}
+
+.admin-first {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.admin-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.admin-btn {
+    margin-top: 10px;
+}
+
+.admin-btn-press {
+    background-color: #FFA500;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-btn-press a {
+    color: white;
+    text-decoration: none;
+}
+
+.cat-div a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.cat-div img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.cat-div p {
+    display: inline;
+    vertical-align: middle;
+}
+
+
+.view {
+    width: 100%;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tr-title {
+    background-color: #f2f2f2;
+}
+
+.tr-title td {
+    padding: 10px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+}
+
+.tr-info td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para el formulario */
+.admin-cli-edite {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para los elementos del formulario */
+.admin-style {
+    margin-bottom: 15px;
+}
+
+.admin-style label {
+    display: block;
+    font-weight: bold;
+}
+
+.admin-style input[type="text"],
+.admin-style input[type="email"],
+.admin-style input[type="password"],
+.admin-style select,
+.admin-style input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box; /* Para que el padding no aumente el ancho del input */
+}
+
+.admin-style select {
+    height: 40px; /* Ajustar la altura del select */
+}
+
+.admin-style input[type="hidden"] {
+    display: none; /* Ocultar los input de tipo hidden */
+}
+
+/* Estilos para el botón */
+.admin-btn-press {
+    text-align: center;
+}
+
+.admin-btn-press button {
+    padding: 10px 20px;
+    background-color: #ff6347; /* Cambia el color del botón según lo necesites */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.admin-btn-press button:hover {
+    background-color: #ff4500; /* Cambia el color del botón al pasar el mouse sobre él */
+}
