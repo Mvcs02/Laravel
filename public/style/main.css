@@ -106,7 +106,7 @@ header h2{
     border: 1px solid grey;
     margin: 10px;
     flex-flow: wrap;
-    display: flex;
+    display: inline-table;
     text-align: center;
 
 }

@@ -21,20 +21,23 @@
                 <button class="btn btn-outline-success">Buscar</button>
             </form>
             <div id="module2">
-                <div id="anuncios"> 
+                <div id="anuncios" class="cajaanuncios"> 
                     <!------- Anuncio ------->
+                    @foreach($propiedades as $propiedad)
                     <div class="anuncio">
-                        <img src="<?php /* echo $data['imagen']; */ ?>" alt="">
-                        <h3><?php /* echo $data['nombre_casa']; */ ?></h3><br>
-                        <p class="precio">{{-- $ --}}<?php/*  echo $data['precio']; */?></p><br>
+                        <img src="{{ asset($propiedad->imagen) }}" alt="">
+                        <h3>{{ $propiedad->nombre_casa }}</h3><br>
+                        <p class="precio">${{ $propiedad->precio }}</p><br>
                         <div class="iconos">
-                            <img src="style/images/icono_wc.svg" alt=""> <span><?php /* echo $data['baños']; */ ?></span>
-                            <img src="style/images/icono_estacionamiento.svg" alt=""> <span><?php/*  echo $data['carro']; */ ?></span>
-                            <img src="style/images/icono_dormitorio.svg" alt=""> <span><?php/*  echo $data['habitaciones'];  */?></span>
+                            <img src="style/images/icono_wc.svg" alt=""> <span>{{ $propiedad->baños }}</span>
+                            <img src="style/images/icono_estacionamiento.svg" alt=""> <span>{{ $propiedad->carro }}</span>
+                            <img src="style/images/icono_dormitorio.svg" alt=""> <span>{{ $propiedad->habitaciones }}</span>
                         </div>{{-- iconos --}}
-                        <a href="det_anuncio.php?id_casa=<?php /* echo $data['id_casa'];  */?>"><button>Contactar</button></a>
+                        <a href="det_anuncio.php?id_casa={{ $propiedad->id }}"><button>Contactar</button></a>
                     </div>{{-- anuncio --}}
+                    @endforeach
                 </div> {{-- anuncios --}}
+                
             </div>  {{-- module2 --}}
     </section>
 @endsection

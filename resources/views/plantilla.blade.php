@@ -46,7 +46,9 @@
     </header>
     <!----body---->
     
-    @yield('contenido')
+    <mian>
+        @yield('contenido')
+    </mian>
 
     <!------- FOOTER ------->
     
