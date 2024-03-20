@@ -29,6 +29,7 @@ Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('/Nosotros', [NosotrosController::class, 'index'])->name('Nosotros');
 Route::get('/Anuncios', [AnunciosController::class, 'index'])->name('Anuncios');
 Route::get('/Contacto', [ContactoController::class, 'index'])->name('Contacto');
+Route::post('/Contacto', [ContactoController::class, 'enviarMensaje'])->name('contacto.enviar');
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 
 /* Paginas Admin */

@@ -87,19 +87,20 @@
         <h2>Casas y Depas en Venta</h2>
         <div id="anuncios">
             <!------- Anuncio ------->
+            @foreach($ultimaPropiedad as $u){{-- INICIA FOREACH --}}
             <div class="anuncio">
-                <img src="{{ asset($ultimaPropiedad->imagen) }}" alt="">
-                <h3>{{ $ultimaPropiedad->nombre_casa }}</h3>
-                <p class="precio">${{ $ultimaPropiedad->precio }}</p>
+                <img src="{{ asset($u->imagen) }}" alt="">
+                <h3>{{ $u->nombre_casa }}</h3>
+                <p class="precio">${{ $u->precio }}</p>
                 <div class="iconos">
-                    <img src="style/images/icono_wc.svg" alt=""> <span>{{ $ultimaPropiedad->baños }}</span>
-                    <img src="style/images/icono_estacionamiento.svg" alt=""> <span>{{ $ultimaPropiedad->carro }}</span>
-                    <img src="style/images/icono_dormitorio.svg" alt=""> <span>{{ $ultimaPropiedad->habitaciones }}</span>
-                </div>
-                <a href="det_anuncio.php?id_casa=<?php /* echo $data['id_casa'];  */?>"><button>Contactar</button></a>
-            </div>
-        </div>
-        </div>
+                    <img src="style/images/icono_wc.svg" alt=""> <span>{{ $u->baños }}</span>
+                    <img src="style/images/icono_estacionamiento.svg" alt=""> <span>{{ $u->carro }}</span>
+                    <img src="style/images/icono_dormitorio.svg" alt=""> <span>{{ $u->habitaciones }}</span>
+                </div>{{-- iconos --}}
+                <a href="{{-- {{ route('detalles-propiedad', ['id' => $ultimaPropiedad->id]) }} --}}"><button>Contactar</button></a>
+            </div>{{-- anuncio --}}
+            @endforeach{{-- CIERRA FOREACH --}}
+        </div>{{-- anuncios --}}
     </section>
     <div class="btn-todas">
         <a href="anuncios.php"><button>VER TODAS</button></a>
