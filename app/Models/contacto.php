@@ -9,6 +9,10 @@ class contacto extends Model
 {
     public $timestamps = false;
     use HasFactory;
-    protected $fillable = ['nombre', 'email'. 'telefono', 'mensaje'];
+    protected $fillable = ['nombre', 
+    'email', 
+    'telefono', 
+    'mensaje'
+];
     protected $table = 'contacto';
 }
