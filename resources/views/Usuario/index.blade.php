@@ -96,11 +96,11 @@
                     <img src="style/images/icono_wc.svg" alt=""> <span>{{ $u->baños }}</span>
                     <img src="style/images/icono_estacionamiento.svg" alt=""> <span>{{ $u->carro }}</span>
                     <img src="style/images/icono_dormitorio.svg" alt=""> <span>{{ $u->habitaciones }}</span>
-                </div>{{-- iconos --}}
-                <a href="{{-- {{ route('detalles-propiedad', ['id' => $ultimaPropiedad->id]) }} --}}"><button>Contactar</button></a>
-            </div>{{-- anuncio --}}
+                <div>
+                        <a href="{{-- {{ route('usuario.propiedad', ['id_casa' => $ultimaPropiedad->id]) }} --}}"><button>Contactar</button></a>
+                </div>                   
             @endforeach{{-- CIERRA FOREACH --}}
-        </div>{{-- anuncios --}}
+        </div>{{-- iconos --}}
     </section>
     <div class="btn-todas">
         <a href="anuncios.php"><button>VER TODAS</button></a>

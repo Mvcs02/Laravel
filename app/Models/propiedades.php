@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class propiedades extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'id_casa';
     protected $fillable = ['nombre_casa', 
     'imagen', 
     'estatus', 

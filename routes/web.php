@@ -8,6 +8,7 @@ use App\Http\Controllers\Usuarios\AnunciosController;
 use App\Http\Controllers\Usuarios\ContactoController;
 use App\Http\Controllers\Usuarios\LoginController;
 use App\Http\Controllers\Usuarios\RegisterController;
+use App\Http\Controllers\Usuarios\PropiedadController;
 
 /* Controladores Admin */
 use App\Http\Controllers\Admin\UsuariosController;
@@ -30,7 +31,12 @@ Route::get('/Nosotros', [NosotrosController::class, 'index'])->name('Nosotros');
 Route::get('/Anuncios', [AnunciosController::class, 'index'])->name('Anuncios');
 Route::get('/Contacto', [ContactoController::class, 'index'])->name('Contacto');
 Route::post('/Contacto', [ContactoController::class, 'enviarMensaje'])->name('contacto.enviar');
+Route::get('/usuario/propiedad/{id}', [PropiedadController::class, 'mostrarDetalles'])->name('usuario.propiedad');
+
+/* LOGIN */
 Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'login']); // Cambié el método a login del LoginController
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout'); // Se mantiene la lógica de logout en LoginController
 
 /* Paginas Admin */
 Route::get('/Usuarios', [UsuariosController::class, 'index'])->name('Usuarios');

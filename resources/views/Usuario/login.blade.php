@@ -35,16 +35,19 @@ nav {
 </style>
 <div class="login-box">
     <img class="avatar" src="style/images/logo.png" alt="LOGO 1">
-    <H1>INICIAR SESION</H1>
-    <form name="LoginForm" action="#" method="POST" class="BOX">
+    <h1>INICIAR SESIÓN</h1>
+    <form method="POST" action="{{ route('login') }}" class="box">
+        @csrf
         <!--username-->
-        <label for="username">Usuario</label>
-        <input type="text" placeholder="Introduce usuario" name="username" class="controls">
+        <label for="usuario">Usuario</label>
+        <input type="text" placeholder="Introduce usuario" name="usuario" class="controls" value="{{ old('usuario') }}">
 
-        <!---password-->
-        <label for="password">Contraseña</label>
-        <input type="password" placeholder="Intruduce Contraseña" name="password" class="controls">
-        <p><a href="{{ route('Usuarios') }}">Login</a></p>
+        <!--password-->
+        <label for="contraseña">Contraseña</label>
+        <input type="password" placeholder="Introduce Contraseña" name="contraseña" class="controls">
+
+        <button type="submit">Iniciar sesión</button>
     </form>
 </div>
+
 @endsection

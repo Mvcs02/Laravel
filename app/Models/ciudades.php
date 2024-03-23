@@ -7,11 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class ciudades extends Model
 {
+    protected $table = 'ciudades';
+    protected $primaryKey = 'id_ciudad';
     public $timestamps = false;
-    use HasFactory;
+
     protected $fillable = [
+        'id_ciudad',
         'ciudad',
     ];
-    protected $table = 'ciudades';
+
     // Relación con otras tablas si es necesario
-}
+}   

@@ -119,8 +119,8 @@ footer div p{
 .cajaanuncios{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-}
+    align-items:baseline;
+    }
 
 
 /*- each anuncio box -*/
