@@ -22,12 +22,12 @@ class usuarios extends Model
     // Relación con el modelo Rol
     public function rol()
     {
-        return $this->belongsTo(Rol::class, 'id_rol');
+        return $this->belongsTo(roles::class, 'id_rol');
     }
 
     // Relación con el modelo Ciudad
     public function ciudad()
     {
-        return $this->belongsTo(Ciudad::class, 'id_ciudad');
+        return $this->belongsTo(ciudades::class, 'id_ciudad');
     }
 }

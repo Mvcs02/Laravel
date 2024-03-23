@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class mensajes extends Model
 {
     use HasFactory;
+    public $timestamps = [
+        'nombre',
+        'email',
+        'telefono',
+        'mensaje'
+    ];
+    protected $table = 'mensajes';
 }
