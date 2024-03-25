@@ -6,30 +6,31 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-
-
 class LoginController extends Controller
 {
-    function index(){
+    public function index()
+    {
         return view('Usuario.login');
     }
+
     public function login(Request $request)
     {
-        $credentials = $request->only('usuario', 'password');
+        $credentials = $request->only('usuario', 'contraseña');
 
         if (Auth::attempt($credentials)) {
-            // Si las credenciales son válidas, redirecciona al usuario a la página deseada
-            return redirect()->intended('admin.Usuarios');
+            // La autenticación fue exitosa, redirigir al usuario a la página deseada
+            return redirect()->intended('/usuarios');
         }
 
-        // Si las credenciales son inválidas, redirecciona de nuevo al formulario de inicio de sesión con un mensaje de error
-        return redirect()->back()->withErrors(['message' => 'Credenciales inválidas']);
+        // Autenticación fallida, redireccionar de vuelta al formulario de inicio de sesión con un mensaje de error
+        return redirect()->back()->withInput($request->only('usuario'))->withErrors(['message' => 'Credenciales inválidas']);
     }
 
-    public function logout()
-    {
-        Auth::logout();
+    public function logout(Request $request)
+{
+    Auth::logout();
 
-        return redirect('Usuario.login');
-    }
+    // Redirigir al usuario a la vista del formulario de inicio de sesión
+    return redirect()->route('login');
+}
 }

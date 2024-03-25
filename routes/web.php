@@ -34,12 +34,22 @@ Route::post('/Contacto', [ContactoController::class, 'enviarMensaje'])->name('co
 Route::get('/usuario/propiedad/{id}', [PropiedadController::class, 'mostrarDetalles'])->name('usuario.propiedad');
 
 /* LOGIN */
+// Rutas para el inicio de sesión
+// Ruta para mostrar el formulario de inicio de sesión
 Route::get('/login', [LoginController::class, 'index'])->name('login');
-Route::post('/login', [LoginController::class, 'login']); // Cambié el método a login del LoginController
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout'); // Se mantiene la lógica de logout en LoginController
+
+// Ruta para procesar el inicio de sesión (debe ser de tipo 'post')
+Route::post('/login', [LoginController::class, 'login']);
+
+
+// Ruta para la página de usuarios, protegida por el middleware 'auth'
+Route::get('/Usuarios', [UsuariosController::class, 'index'])->name('Usuarios')->middleware('auth');
+
+// Ruta para cerrar sesión
+Route::post('/logout', 'Usuarios\LoginController@logout')->name('logout');
+
 
 /* Paginas Admin */
-Route::get('/Usuarios', [UsuariosController::class, 'index'])->name('Usuarios');
 Route::get('/Propiedades', [PropiedadesController::class, 'index'])->name('Propiedades');
 Route::get('/Mensajes', [MensajesController::class, 'index'])->name('Mensajes');
 Route::get('/Ciudad', [CiudadController::class, 'index'])->name('Ciudad');

@@ -41,13 +41,25 @@ nav {
         <!--username-->
         <label for="usuario">Usuario</label>
         <input type="text" placeholder="Introduce usuario" name="usuario" class="controls" value="{{ old('usuario') }}">
+@error('usuario')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
 
         <!--password-->
         <label for="contraseña">Contraseña</label>
         <input type="password" placeholder="Introduce Contraseña" name="contraseña" class="controls">
+@error('contraseña')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
 
         <button type="submit">Iniciar sesión</button>
     </form>
-</div>
 
+        <div>
+            <!-- Agregar enlace para restablecer contraseña -->
+            <a href="{{-- {{ route('password.request') }} --}}">¿Olvidaste tu contraseña?</a>
+            <!-- Agregar enlace para registrarse -->
+            <a href="{{-- {{ route('register') }} --}}">¿No tienes cuenta? Regístrate aquí</a>
+        </div>
+</div>
 @endsection

@@ -1,12 +1,12 @@
 <?php
-
 namespace App\Models;
-
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\Authenticatable;
 
-class usuarios extends Authenticatable
+
+class usuarios extends Model implements Authenticatable // Implementar la interfaz Authenticatable
 {
     use HasFactory, Notifiable;
 
@@ -21,20 +21,4 @@ class usuarios extends Authenticatable
         'id_rol',
         'id_ciudad'
     ];
-    public function getAuthPassword()
-    {
-        return $this->contraseña;
-    }
-
-    // Relación con el modelo Rol
-    public function rol()
-    {
-        return $this->belongsTo(roles::class, 'id_rol');
-    }
-
-    // Relación con el modelo Ciudad
-    public function ciudad()
-    {
-        return $this->belongsTo(ciudades::class, 'id_ciudad');
-    }
 }
