@@ -7,11 +7,16 @@ use Illuminate\Http\Request;
 
 
 class IndexController extends Controller{
-    function index(){
+    public function index(){
         $ultimaPropiedad = propiedades::latest('id_casa')->take(3)->get();
         return view('Usuario.index',['ultimaPropiedad' => $ultimaPropiedad]);
     }
-    function ver(){
+    public function ver(){
         return view('plantilla');
+    }
+
+    public function Anuncio($id_casa){
+
+
     }
 }

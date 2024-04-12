@@ -31,11 +31,17 @@ Route::get('/Nosotros', [NosotrosController::class, 'index'])->name('Nosotros');
 Route::get('/Anuncios', [AnunciosController::class, 'index'])->name('Anuncios');
 Route::get('/Contacto', [ContactoController::class, 'index'])->name('Contacto');
 Route::post('/Contacto', [ContactoController::class, 'enviarMensaje'])->name('contacto.enviar');
-Route::get('/usuario/propiedad/{id}', [PropiedadController::class, 'mostrarDetalles'])->name('usuario.propiedad');
+Route::get('/usuario/propiedad/{id_casas}', [PropiedadController::class, 'mostrarDetalles'])->name('usuario.propiedad');
 
 /* LOGIN */
 // Rutas para el inicio de sesión
 // Ruta para mostrar el formulario de inicio de sesión
+
+Route::controller(LoginController::class)->group(function(){
+Route::get('login', 'index');
+Route::post();
+Route::get();
+});
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 
 // Ruta para procesar el inicio de sesión (debe ser de tipo 'post')
@@ -46,7 +52,7 @@ Route::post('/login', [LoginController::class, 'login']);
 Route::get('/Usuarios', [UsuariosController::class, 'index'])->name('Usuarios')->middleware('auth');
 
 // Ruta para cerrar sesión
-Route::post('/logout', 'Usuarios\LoginController@logout')->name('logout');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 /* Paginas Admin */
