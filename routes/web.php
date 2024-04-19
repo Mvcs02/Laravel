@@ -39,8 +39,6 @@ Route::get('/usuario/propiedad/{id_casas}', [PropiedadController::class, 'mostra
 
 Route::controller(LoginController::class)->group(function(){
 Route::get('login', 'index');
-Route::post();
-Route::get();
 });
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 
