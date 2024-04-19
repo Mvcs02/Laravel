@@ -31,7 +31,6 @@ Route::get('/Nosotros', [NosotrosController::class, 'index'])->name('Nosotros');
 Route::get('/Anuncios', [AnunciosController::class, 'index'])->name('Anuncios');
 Route::get('/Contacto', [ContactoController::class, 'index'])->name('Contacto');
 Route::post('/Contacto', [ContactoController::class, 'enviarMensaje'])->name('contacto.enviar');
-Route::get('/usuario/propiedad/{id_casas}', [PropiedadController::class, 'mostrarDetalles'])->name('usuario.propiedad');
 
 /* LOGIN */
 // Rutas para el inicio de sesión
@@ -46,8 +45,7 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 
 
-// Ruta para la página de usuarios, protegida por el middleware 'auth'
-Route::get('/Usuarios', [UsuariosController::class, 'index'])->name('Usuarios')->middleware('auth');
+
 
 // Ruta para cerrar sesión
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
@@ -58,5 +56,5 @@ Route::get('/Propiedades', [PropiedadesController::class, 'index'])->name('Propi
 Route::get('/Mensajes', [MensajesController::class, 'index'])->name('Mensajes');
 Route::get('/Ciudad', [CiudadController::class, 'index'])->name('Ciudad');
 Route::get('/plantilla', [IndexController::class, 'ver'])->name('plantilla');
-
+Route::get('/Usuarios', [UsuariosController::class, 'index'])->name('Usuarios');
 /* Pagina Vendedor */

@@ -1,5 +1,6 @@
 @extends('plantillaadmin')
 @section('contenidoadmin')
+
 <div class="admin-container" id="module4">
     <div class="edite">
         <form name="update_form" id="userForm" class="admin-cli-edite"  enctype="multipart/form-data">
@@ -46,6 +47,7 @@
         </form>
     </div>
     <div class="view">
+        
         <table>
             <tr class="tr-title">
                 <td>Clave Usuario</td>
@@ -59,20 +61,23 @@
             <!--    <td>Editar</td>-->
                 <td>Eliminar</td>
             </tr>
+            @foreach($usuarios as $u)
             <tr class="tr-info">
-                <td><?php/*  echo $clientes['id_usuarios'] */?></td>
-                <td><?php /* echo $clientes['nombre_usuario'] */?></td>
-                <td><?php /* echo $clientes['nombre_ciudad'] */ ?></td>
-                <td><?php /* echo $clientes['correo'] */?></td>
-                <td><?php /* echo $clientes['usuario'] */?></td>
-                <td><?php /* echo $clientes['contraseña'] */?></td>
-                <td><?php /* echo $clientes['telefono'] */?></td>
-                <td><?php /* echo $clientes['nombre_rol'] */?></td>
+                <td>{{ $u->id_usuarios }}</td>
+                <td>{{ $u->nombre_usuario }}</td>
+                <td>{{ $u->ciudades->nombre_ciudad }}</td>
+                <td>{{ $u->email }}</td>
+                <td>{{ $u->user }}</td>
+                <td>{{ $u->password }}</td>
+                <td>{{ $u->telefono }}</td>
+                <td>{{ $u->id_rol }}</td>
               <!--  <td><a onclick="edituser(<?php /* echo $clientes['id_usuarios']; */ ?>)">Editar</a></td>-->
                 <td><a onclick="deluser(<?php /* echo $clientes['id_usuarios']; */ ?>)">Eliminar</a></td>
             </tr>
+            @endforeach
             <?php /* } */?>
         </table>
+        
     </div>
 </div>
 @endsection

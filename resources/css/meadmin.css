@@ -1,0 +1,198 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    caret-color: var(--color7);
+}
+.fku{
+    width: auto; /* Deja que el ancho se ajuste automáticamente */
+    max-height: 40px; /* Establece una altura máxima */
+}
+.cat-link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s;
+}
+
+/* Estilos cuando se pasa el cursor sobre el enlace */
+.cat-link:hover {
+    transform: scale(1.1);
+}
+.admin-pic{
+    width: 140px;
+    border-radius: 20%;
+}
+.admin-body {
+    display: flex;
+    background-color: #333333;
+
+}
+
+.admin-aside {
+    color: white;
+    border-right: 5px solid black;
+    height: 100vh;
+    width: 20%px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.admin-first {
+    display: flex;
+    flex-direction: column;
+    height: 45vh;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+}
+.admin-btn-press a{
+    color: black;
+}
+.admin-btn-press {
+    background-color: orange; /* Color de fondo naranja */
+    border: none;
+    border-radius: 5px; /* Esquinas redondas */
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s; /* Transiciones suaves */
+}
+.admin-btn-press:hover {
+    transform: scale(1.05); /* Escala al 105% en hover */
+    background-color: #ddd; /* Color de fondo gris en hover */
+}
+.cat-div{
+display: flex;
+    flex-direction: column;
+    height: 45vh;
+    color: black;
+    justify-content: space-around;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 1);
+    width: 85%;
+}
+.cat-div a {
+    font-size: 18px;
+    color: var(--color5);
+}
+a{
+    text-decoration: none;
+}
+.admin-container {
+
+    flex: 1; /* El container ocupa el espacio restante */
+    height: 100vh; /* Ocupa la altura completa de la ventana */
+    margin-left: 1%; /*Deja espacio para el aside en el margen izquierdo*/
+}
+.admin-container img{
+    width: auto; /* Deja que el ancho se ajuste automáticamente */
+    max-height: 50px; /* Establece una altura máxima */
+    
+}
+.edite {
+    height: 60vh;
+    
+}
+.admin-cli-edite {
+    border-radius: 20%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    margin: 8px;
+    background-color: #575757;
+}
+.admin-btn input[type="submit"] {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.admin-btn input[type="submit"]:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+.admin-style {
+    display: flex;
+    width: 75%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.admin-style-new {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+    height: 30px;
+    border-radius: 10px;
+}
+.register-ipt {
+    width: 60%;
+    height: 40px;
+    border-radius: 15px;
+    padding: 5px;
+    border: 3px solid transparent;
+    font-size: 16px;
+    margin: 6px;
+}
+.view {
+    border-radius: 10%;
+    width: 98%;
+    height: 33.8vh;
+    background-color: #575757;
+    margin: 8px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+.view td{
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: gray;
+}
+
+td{
+    display: table-cell;
+}
+.admin-area {
+    border-radius: 15px;
+    padding: 3px;
+    border: 3px solid transparent;
+}
+.tr-info img {
+    width: 20%px;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+/* Estilos cuando se pasa el cursor sobre la imagen */
+.tr-info img:hover {
+    transform: scale(1.5);
+}
+

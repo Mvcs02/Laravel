@@ -12,8 +12,7 @@ class ciudades extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'id_ciudad',
-        'ciudad',
+        'nombre_ciudad',
     ];
 
     // Relación con otras tablas si es necesario

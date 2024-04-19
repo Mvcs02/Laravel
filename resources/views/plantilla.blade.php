@@ -21,6 +21,7 @@
          
     <!-- CSS -->
     <link rel="stylesheet" href="style/nosotros.css">
+    
     <link rel="stylesheet" type="text/css" href="style/estilo.css">
     
 

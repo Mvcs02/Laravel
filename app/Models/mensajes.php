@@ -7,12 +7,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class mensajes extends Model
 {
-    use HasFactory;
-    public $timestamps = [
-        'nombre',
-        'email',
-        'telefono',
-        'mensaje'
-    ];
     protected $table = 'mensajes';
+    public $timestamps = false;
+    protected $primaryKey = 'id_mensajes';
+    protected $fillable = ['nombre',
+    'mensaje',
+    'email', 
+    'celular'
+];
+// Relación con el modelo Ciudad
+public function Casas()
+{
+    return $this->belongsTo(propiedades::class, 'id_casa');
+}
+    public function Usuarios()
+    {
+        return $this->belongsTo(Usuario::class, 'id_usuarios');
+    }
 }
